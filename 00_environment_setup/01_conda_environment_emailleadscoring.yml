@@ -65,3 +65,7 @@ dependencies:
       # Database
       - sqlalchemy
 
+      # Extending Pandas
+      - pyjanitor
+      - pandas-flavor
+
