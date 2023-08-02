@@ -1,0 +1,67 @@
+# Environment Setup ----
+
+# 1. Create an empty conda env ----
+#  - Using an environment.yml file with conda
+#  - Important Terminal Commands:
+#     conda env create -f environment.yml
+#
+# Conda Environment Setup Instructions ----
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+# 
+#    conda env create -f 00_environment_setup/01_conda_environment_emailleadscoring.yml
+#    conda env update --file 00_environment_setup/01_conda_environment_emailleadscoring.yml --prune
+#    conda env export --name emailleadscoring > 00_environment_setup/emailleadscoring_py_env.yml
+#    conda env remove --name emailleadscoring
+#    conda env list
+
+#   Convert the emailleadscoring_py_env.yml file to a requirements.txt format so we can use Pip Install Requirements methodology shown below
+#   - pip freeze > 00_environment_setup/requirements.txt
+
+# 2. Activate the Environment
+#  - Command Palette > Python Select Interpreter
+#  - Select emailleadscoring environment
+#  - May need to refresh
+# 
+# 3. Trash Any Open Terminals (Open a New Terminal)
+#   
+# 4. Pip Install Requirements (Will take 10 minutes or so)
+#   - pip install -r requirements.txt
+#   - In the event of any errors: Relax requirements and rerun: 
+#       pip install -r requirements.txt
+
+
+name: emailleadscoring
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.4
+  - pip  
+#Conda (Anaconda)
+  - anaconda-client
+  - conda-build
+  - conda-verify
+  - pip:
+      # NBDEV Core Data
+      - jupyterlab
+      - nbdev
+      - jupyterlab-quarto # Quarto JupyterLab extension
+      - pre-commit # nbdev’s git pre-commit hooks
+
+      # PyPi
+      - twine
+
+      # Core Data
+      - numpy
+      - pandas
+
+      # Visualization
+      - matplotlib
+      - plotnine
+      - plotly
+
+      # Database
+      - sqlalchemy
+

@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "emailleadscoring"
+  site-url: "https://mohitshrestha.github.io/emailleadscoring"
+  description: "Email Lead Scoring Python Package"
+  repo-branch: main
+  repo-url: "https://github.com/mohitshrestha/emailleadscoring"
