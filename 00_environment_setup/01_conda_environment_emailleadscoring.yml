@@ -39,10 +39,11 @@ channels:
 dependencies:
   - python=3.11.4
   - pip  
-#Conda (Anaconda)
-  - anaconda-client
-  - conda-build
-  - conda-verify
+  # - conda:
+      # # Conda (Anaconda)
+      # - anaconda-client
+      # - conda-build
+      # - conda-verify
   - pip:
       # NBDEV Core Data
       - jupyterlab

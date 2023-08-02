@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "cost_calculations.html",
+    "href": "cost_calculations.html",
+    "title": "cost_calculations",
+    "section": "",
+    "text": "source\n\ncost_calc_monthly_cost_table\n\n cost_calc_monthly_cost_table (email_list_size=100000.0,\n                               email_list_growth_rate=0.035,\n                               sales_emails_per_month=5,\n                               unsub_rate_per_sales_email=0.005,\n                               customer_conversion_rate=0.05,\n                               average_customer_value=2000, n_periods=12)\n\nThis function generates a Cost Table. Args: email_list_size (type, optional): Email list size. Defaults to 1e5. email_list_growth_rate (float, optional): Monthly email list growth rate. Defaults to 0.035. sales_emails_per_month (int, optional): Sales email per month. Defaults to 5. unsub_rate_per_sales_email (float, optional): Unsubscription rate per email. Defaults to 0.005. customer_conversion_rate (float, optional): Rate of email subscribers that convert to customers. Defaults to 0.05. average_customer_value (int, optional): Average customer value. Defaults to 2000. n_periods (int, optional): Number of months for cost table. Defaults to 12.\nReturns: DataFrame: Returns a Cost Table\n\nsource\n\n\ncost_total_unsub_cost\n\n cost_total_unsub_cost (cost_table)\n\nTakes the input from cost_calc_monthly_cost_table(), and produces a summary of the total costs. Args: cost_table (DataFrame): Output fro cost_calc_monthly_cost_table()\nReturns: DataFrame: Summarized total costs for email unsubscription.\n\nsource\n\n\ncost_simulate_unsub_costs\n\n cost_simulate_unsub_costs (email_list_monthly_growth_rate=[0, 0.035],\n                            customer_conversion_rate=[0.04, 0.05, 0.06],\n                            **kwargs)\n\nGenerate a cost analysis simulation to characterize cost uncertainty.\nArgs: email_list_monthly_growth_rate (list, optional): List of values for email monthly growth rate to simulate. Defaults to [0, 0.035]. customer_conversion_rate (list, optional): List of values for customer conversion rate to simulate. Defaults to [0.04, 0.05, 0.06].\nReturns: DataFrame: Cartesian Product of email list and customer conversion rate is calculated and total unsubscriber costs are calculated.\n\nsource\n\n\ncost_plot_simulated_unsub_costs\n\n cost_plot_simulated_unsub_costs (simulation_results)\n\nA plottign function to plot the results from cost_simulate_unsub_costs() function.\nArgs: simulation_results (DataFrame): The output from cost_simulate_unsub_costs()\nReturns: Plotly Plot: Heatmap that visualizes the cost simulation."
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "emailleadscoring",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "emailleadscoring",
+    "section": "Install",
+    "text": "Install\npip install emailleadscoring"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "emailleadscoring",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\nimport emailleadscoring as els\n\nTesting: Cost Table Function\n\n# els.cost_calc_monthly_cost_table()\n\nTesting: Total Cost Function\n\n# els.cost_total_unsub_cost(els.cost_calc_monthly_cost_table())\n\n\n# import pandas_flavor as pf\n# - Using pandas_flavor package and adding @pf.register_dataframe_method # Using pandas_flavor package: @pf.register_dataframe_method** Turns a function into a data frame method so we can use method chaining\n\n# els.cost_calc_monthly_cost_table() \\\n#     .cost_total_unsub_cost()\n\nTesting: Simulation Function\n\n# els.cost_simulate_unsub_costs()\n\nTesting: Plot Simulation (Heat Map) Function\n\n# els.cost_simulate_unsub_costs(\n#     email_list_monthly_growth_rate = [0, 0.015, 0.025, 0.035]\n# ) \\\n#     .cost_plot_simulated_unsub_costs()"
+  }
+]
