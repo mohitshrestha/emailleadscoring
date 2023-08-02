@@ -32,10 +32,8 @@ Testing: Total Cost Function
 ```
 
 ``` python
-import pandas_flavor as pf
+# import pandas_flavor as pf
 # - Using pandas_flavor package and adding @pf.register_dataframe_method # Using pandas_flavor package: @pf.register_dataframe_method** Turns a function into a data frame method so we can use method chaining
-
-# import email_lead_scoring as els
 
 # els.cost_calc_monthly_cost_table() \
 #     .cost_total_unsub_cost()
@@ -50,8 +48,6 @@ Testing: Simulation Function
 Testing: Plot Simulation (Heat Map) Function
 
 ``` python
-# import email_lead_scoring as els
-
 # els.cost_simulate_unsub_costs(
 #     email_list_monthly_growth_rate = [0, 0.015, 0.025, 0.035]
 # ) \
