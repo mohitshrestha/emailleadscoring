@@ -4,16 +4,6 @@
 __all__ = ['cost_calc_monthly_cost_table', 'cost_total_unsub_cost', 'cost_simulate_unsub_costs',
            'cost_plot_simulated_unsub_costs']
 
-# %% ../nbs/00_cost_calculations.ipynb 3
-#### Core Python Data Analysis,
-import pandas as pd 
-import numpy as np
-import janitor as jn
-import plotly.express as px
-import pandas_flavor as pf
-import os
-import sqlalchemy as sql
-
 # %% ../nbs/00_cost_calculations.ipynb 4
 #### Function: Calculate Monthly Unsubscriber Cost Table
 
